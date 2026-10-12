@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Let and Const Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background-color: #4a67d6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            color: #263c91;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Let and Const Keywords</h2>
+
+        <input type="text" id="name" placeholder="Enter student name">
+        <br>
+
+        <input type="number" id="age" placeholder="Enter student age">
+        <br>
+
+        <button onclick="showDetails()">Show Details</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function showDetails() {
+
+            // let: value can be changed
+            let studentName =
+                document.getElementById("name").value;
+
+            let studentAge =
+                Number(document.getElementById("age").value);
+
+            studentName = studentName.toUpperCase();
+
+            // const: cannot be reassigned
+            const schoolName = "ABC School";
+
+            document.getElementById("result").innerHTML =
+                "Student Name: " + studentName +
+                "<br>Student Age: " + studentAge +
+                "<br>School Name: " + schoolName;
+        }
+    </script>
+
+</body>
+
+</html>
